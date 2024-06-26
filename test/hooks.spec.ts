@@ -1,6 +1,8 @@
 import { expect } from "chai"
 import Calculator from "../src/calculator"
 
+// describe.skip("Hooks Tests", () => { //Ignore this test cases an put the stage pending
+// describe.only("Hooks Tests", () => { //Only excecuted this test cases
 describe("Hooks Tests", () => {
     const calcu = new Calculator()
 
