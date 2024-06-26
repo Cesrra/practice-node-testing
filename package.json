@@ -1,0 +1,23 @@
+{
+    "name": "testing-ts-node",
+    "version": "1.0.0",
+    "description": "An project to practice the testing in Node using the TaypeScript",
+    "main": "index.ts",
+    "scripts": {
+        "test": "nyc mocha --require ts-node/register test/**/*.spec.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/chai": "^4.3.16",
+        "@types/mocha": "^10.0.7",
+        "chai": "^4.3.7",
+        "mocha": "^10.5.1",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.5.2"
+    },
+    "dependencies": {
+        "nyc": "^17.0.0"
+    }
+}
