@@ -1,12 +1,21 @@
 import { expect } from "chai"
 import Calculator from "../src/calculator"
+import sinon, { SinonStub } from "sinon"
 
 describe("Test Calculator Class", () => {
+    let stub: SinonStub
+
+    afterEach(() => {
+        console.log('AfterEach')
+        if(stub) stub.restore()
+    })
+
     it("Should return Sum", () => {
         const calcu = new Calculator()
+        stub = sinon.stub(calcu, "getRandomValue").returns(8) 
         const result = calcu.add(2,3)
 
-        expect(result).to.equal(5)
+        expect(result).to.equal(13)
     })
 
     it("Should return Substract", () => {
