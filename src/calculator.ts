@@ -1,3 +1,7 @@
+import axios from "axios"
+
+const BASE_URL = "https://jsonplaceholder.typicode.com"
+
 class Calculator {
     add(num1: number, num2: number): number {
         this.logMessage("Looging add function")
@@ -35,6 +39,14 @@ class Calculator {
                 resolve(4)
             }, 200)
         })
+    }
+
+    async getUser() {
+        return await axios.get(`${BASE_URL}/users/1`)
+    }
+
+    async saveUser(userPayload: object) {
+        return await axios.post(`${BASE_URL}/users`, userPayload)
     }
 }
 
